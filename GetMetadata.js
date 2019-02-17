@@ -142,11 +142,7 @@ class Application {
         if (options.connect) {
             this._widgetSetConnect(widget, options.connect);
         }
-        if (options.hide === true) {
-            widget.hide();
-        } else  {
-            widget.show();
-        }
+        options.hide ? widget.hide() : widget.show();
         return widget;
     }
 
