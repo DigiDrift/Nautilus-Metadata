@@ -1,8 +1,6 @@
 {
   parserOptions: {
     ecmaVersion: 6,
-    ecmaFeatures: {
-      }
     },
   rules: {
     quotes: [ 2, "single" ],
