@@ -1,0 +1,24 @@
+{
+  parserOptions: {
+    ecmaVersion: 6,
+    ecmaFeatures: {
+      }
+    },
+  rules: {
+    quotes: [ 2, "single" ],
+    semi: [ 2, "always" ],
+    indent: ["error", 4],
+    no-empty: "error",
+    no-empty-function: "error",
+    no-dupe-args: "error",
+    no-irregular-whitespace: "error",
+    block-scoped-var: "error",
+    default-case: "error",
+    eqeqeq: "error",
+    vars-on-top: "error",
+    no-unused-vars: "error",
+    accessor-pairs: "error",
+    array-callback-return: "error",
+
+  }
+}
