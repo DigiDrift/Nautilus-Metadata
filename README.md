@@ -6,6 +6,8 @@ I wrote this little script to help me sorting through my many photo's and wantin
 
 To use this piece of code, just download the metadata.js file and place it in your nautilus scripts folder. Rename the file to whatever you wish and then make it executable with chmod +x metadata.js (or whatever you named it) and your good to go.
 
+Please make sure ExifTool is installed on your system before using this script as it is required for use. It's a popular utility and you can install it from any of the main Linux package managers. For any further information on ExifTool please visit [this](https://www.sno.phy.queensu.ca/~phil/exiftool/) link.
+
 Please let me know if you find any bugs, or have any feature requests.
 
 ![Screenshot](screenshot.jpg)
