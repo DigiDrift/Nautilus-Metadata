@@ -1,7 +1,7 @@
 #!/usr/bin/gjs
 
 /*
-* Nautilus-Metadata a script to show metadata in a GUI on the lLinux desktop
+* Nautilus-Metadata a script to show metadata in a GUI on the Linux desktop
 * Copyright (C) 2019  Jason Webb
 
 * This program is free software: you can redistribute it and/or modify
