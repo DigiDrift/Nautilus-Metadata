@@ -301,7 +301,7 @@ class Application {
         };
 
         if (typeof err !== 'string' && err.toString().includes('No such file or directory')) {
-            dialog('Please install apt-get exiftool');
+            dialog('Please install exiftool');
         } else {
             dialog(err);
         }
