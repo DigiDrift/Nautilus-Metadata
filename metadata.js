@@ -35,7 +35,7 @@ class Application {
         this.widgets = {};
         this.fileNumber = 0;
         this.VERSION = '1.0';
-        this.TITLE =  'Nautilus GetMetadata';
+        this.TITLE =  'Nautilus-Metadata';
         GLib.set_prgname(this.TITLE);
     }
 
@@ -133,6 +133,7 @@ class Application {
      * object of properties.
      * @param {object} options object of properties to construct the widget
      * @property {string} options.type a string representing the Gtk Widget type
+     * @property {object} options.init an initialization object passed directly to new widget constructor
      * @property {object} options.properties an object containing the widget properties
      * @property {string} options.properties.name a string containing a unique name for the widget
      * @property {object} options.connect an object containing the signal functions for the widget
@@ -148,7 +149,9 @@ class Application {
             widget = new WebKit2.WebView();
             break;
         default:
-            widget = new Gtk[options.type];
+            widget = options.init
+                ? new Gtk[options.type]
+                : new Gtk[options.type](options.init);
             break;
         }
 
@@ -816,7 +819,7 @@ class Application {
             type: 'HeaderBar',
             properties: {
                 name: 'headerbar',
-                set_title: 'GetMetadata',
+                set_title: 'Nautilus-Metadata',
                 set_subtitle: `${ARGV.length} files selected` ,
                 show_close_button: true,
                 pack_end,
