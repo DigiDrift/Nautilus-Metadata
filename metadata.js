@@ -133,7 +133,6 @@ class Application {
      * object of properties.
      * @param {object} options object of properties to construct the widget
      * @property {string} options.type a string representing the Gtk Widget type
-     * @property {object} options.init an initialization object passed directly to new widget constructor
      * @property {object} options.properties an object containing the widget properties
      * @property {string} options.properties.name a string containing a unique name for the widget
      * @property {object} options.connect an object containing the signal functions for the widget
@@ -145,13 +144,11 @@ class Application {
     _widgetConstruct(options) {
         let widget;
         switch (options.type) {
-        case 'WebView':
+        case 'WebView': 
             widget = new WebKit2.WebView();
             break;
         default:
-            widget = options.init
-                ? new Gtk[options.type]
-                : new Gtk[options.type](options.init);
+            widget =  new Gtk[options.type];
             break;
         }
 
